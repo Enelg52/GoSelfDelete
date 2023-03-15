@@ -112,7 +112,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("[*] Open file handler...")
+	fmt.Println("[*] Open file handler")
 	fmt.Println("[*] Handle :", handle)
 
 	err = renameHandle(handle)
@@ -120,26 +120,26 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println("[*] Rename file...")
+	fmt.Println("[*] Rename file")
 	err = windows.CloseHandle(handle)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("[*] Close handler...")
+	fmt.Println("[*] Close file handler")
 	err, handle = openHandle(ex)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("[*] Open file handler...")
+	fmt.Println("[*] Open file handler")
 	fmt.Println("[*] Handle :", handle)
 	err = depositeHandle(handle)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("[*] Deposite file handle...")
+	fmt.Println("[*] Deposite file handle")
 	err = windows.CloseHandle(handle)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("[*] Close handler...")
+	fmt.Println("[*] Close file handler")
 }
